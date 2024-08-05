@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Tabs with Cards</title>
@@ -39,34 +39,59 @@
       .fa-check {
         color: black;
       }
-
       .line {
-      margin: 20px 0;
-      border: 0;
-      border-top: 2px solid #ddd;
-    }
-
-    .vertical-line { 
-  width: 0px; 
-  border-left: 1px solid #000; 
-  height: 100%; 
-  float: left; 
-} 
-
-.sectionA{
-    width: 50%; 
-    float: left; 
+        margin: 20px 0;
+        border: 0;
+        border-top: 2px solid #ddd;
+      }
+      .card-body {
+        position: relative;
+      }
+      .row {
+        display: flex;
+        margin: 0;
+      }
+      .col-md-4 {
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      .vertical-line {
+        width: 1px;
+        background-color: #ddd;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(50%);
+      }
+      .horizontal-line {
+        width: 100%;
+        border-top: 1px solid #ddd;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .custom-hr {
+  border: 0;
+  height: 1px;
+  background: #ddd; /* Light gray color */
+  margin: 20px 0; /* Spacing above and below the line */
 }
-.sectionB{
-    width: 50%; 
-    float: left;
+
+#additional-content{
+    padding-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
+.row2{
+    border-right: 1px solid black;
     
-   
+}
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <div class="container">
     <h1 class="Service"><b>Our SEO Service Package</b></h1>
     <div class="tab-content" id="myTabContent">
       <div
@@ -172,47 +197,95 @@
             newCard.id = targetId.replace("#", "");
             newCard.className = "more-card card mt-3";
             newCard.innerHTML = `
-            <div class="card-body ">
-            <div>
-              <h5 class="card-title">RESEARCH</h5>
-              <div>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>  <br> 
-               <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>  
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>  <br> 
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>  <br>   
-             </div>
-             </div>
 
-               <hr class="line">
+            <div class="card-body">
+              <div class="row row2" >
+                <div class="col-md-4">
+                  <h5 class="card-title">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
 
-             <div class="sectionA">
-              <h5 class="card-title">Technical SEO</h5>
-              <div>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>  <br> 
-               <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>  <br> 
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>   <br>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>   <br>  
-             </div>
+                
+                <div class="col-md-4">
+                  <h5 class="card-title">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
 
-               <hr class="line">
+           <hr class="custom-hr">
 
-              <div class="sectionB">
-              <h5 class="card-title">RESEARCH</h5>
-              <div>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>   <br>
-               <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>   <br>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>   <br>
-              <a href=""> <i class="fa-solid fa-check">Industry Research</i></a>  <br>       
-             </div>
-             </div>
+                <div class="col-md-4">
+                  <h5 class="card-title">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+              </div>
+                 <hr class="custom-hr">
 
-
-
+              
             </div>
-          `
+          `;
             additionalContentDiv.appendChild(newCard);
 
             // Add event listener to the hide button
@@ -225,5 +298,6 @@
         });
       });
     </script>
+    </div>
   </body>
 </html>
