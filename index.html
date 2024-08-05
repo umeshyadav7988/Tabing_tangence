@@ -18,12 +18,11 @@
       .Service {
         text-align: center;
         padding-top: 20px;
+        font-size: 45px;
       }
       .card {
         width: 100%;
         height: 100%;
-        margin-left: 15px;
-        margin-right: 15px;
         box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
       }
       .tab-content {
@@ -31,7 +30,7 @@
       }
       .more-card {
         width: 100%;
-        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 22px #00000029;
       }
       .know-more-btn {
         background-color: black;
@@ -45,11 +44,13 @@
         border-top: 2px solid #ddd;
       }
       .card-body {
-        position: relative;
+        /* position: relative; */
+        border-radius: 15px;
+        justify-content: center;
       }
       .row {
         display: flex;
-        margin: 0;
+        margin: 5;
       }
       .col-md-4 {
         padding: 0 10px;
@@ -79,14 +80,42 @@
 }
 
 #additional-content{
-    padding-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-top: 55px;
+  
 }
 
-.row2{
-    border-right: 1px solid black;
-    
+.card-title {
+    text-align: center;
+    color: #303030;
+    font-size: 24px;
+    width: 214px;
+    height: 28px;
+}
+.card-text{
+    text-align: center;
+    width: 200px;
+    height: 115px;
+}
+.know-more-btn {
+    width: 212.72px;
+    height: 60.84px;
+    border-radius: 16px;
+    opacity: 1;
+    box-shadow: 0px 3px 22px #00000029;
+}
+.keyword{
+
+    padding-bottom: 20px;
+   font-size: 20px;
+}
+.card-title2{
+left: 140px;
+width: 174px;
+height: 28px;
+}
+.col-md-4{
+    margin-bottom: 30px;
+    border-radius: 1 px solid black ;
 }
     </style>
 </head>
@@ -110,7 +139,7 @@
                   traffic/month.
                 </p>
                 <button
-                  class="btn btn-primary know-more-btn"
+                  class="btn btn-primary know-more-btn  know-more-btn1"
                   data-target="#moreHomeText1"
                 >
                   Know More
@@ -127,7 +156,7 @@
                   traffic/month.
                 </p>
                 <button
-                  class="btn btn-primary know-more-btn"
+                  class="btn btn-primary know-more-btn  know-more-btn2"
                   data-target="#moreHomeText2"
                 >
                   Know More
@@ -144,7 +173,7 @@
                   traffic/month.
                 </p>
                 <button
-                  class="btn btn-primary know-more-btn"
+                  class="btn btn-primary know-more-btn  know-more-btn3"
                   data-target="#moreHomeText3"
                 >
                   Know More
@@ -161,7 +190,7 @@
                   objective.
                 </p>
                 <button
-                  class="btn btn-primary know-more-btn"
+                  class="btn btn-primary know-more-btn  know-more-btn4"
                   data-target="#moreHomeText4"
                 >
                   Know More
@@ -181,27 +210,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
     <script>
-      document.querySelectorAll(".know-more-btn").forEach((button) => {
-        button.addEventListener("click", () => {
-          const targetId = button.getAttribute("data-target");
-          const existingCard = document.querySelector(targetId);
+     document.querySelectorAll(".know-more-btn1").forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const additionalContentDiv = document.getElementById("additional-content");
 
-          // Remove existing card if it exists
-          if (existingCard) {
-            existingCard.remove();
-          } else {
-            // Add a new card
-            const additionalContentDiv =
-              document.getElementById("additional-content");
-            const newCard = document.createElement("div");
-            newCard.id = targetId.replace("#", "");
-            newCard.className = "more-card card mt-3";
-            newCard.innerHTML = `
+                // Clear any existing content
+                additionalContentDiv.innerHTML = "";
+
+                // Add a new card
+                const newCard = document.createElement("div");
+                newCard.id = targetId.replace("#", "");
+                newCard.className = "more-card card mt-3";
+                newCard.innerHTML = `
 
             <div class="card-body">
+                <h3 class="keyword">No. of Keywords : 50</h3>
               <div class="row row2" >
                 <div class="col-md-4">
-                  <h5 class="card-title">RESEARCH</h5>
+                  <h5 class="card-title2">RESEARCH</h5>
                   <div>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
@@ -211,7 +238,7 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title">Technical SEO</h5>
+                  <h5 class="card-title2">Technical SEO</h5>
                   <div>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
@@ -223,7 +250,7 @@
 
                 
                 <div class="col-md-4">
-                  <h5 class="card-title">Additional Info</h5>
+                  <h5 class="card-title2">Additional Info</h5>
                   <div>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
@@ -236,7 +263,7 @@
            <hr class="custom-hr">
 
                 <div class="col-md-4">
-                  <h5 class="card-title">RESEARCH</h5>
+                  <h5 class="card-title2">RESEARCH</h5>
                   <div>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
@@ -256,7 +283,7 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title">Technical SEO</h5>
+                  <h5 class="card-title2">Technical SEO</h5>
                   <div>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
@@ -271,7 +298,7 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title">Additional Info</h5>
+                  <h5 class="card-title2">Additional Info</h5>
                   <div>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
                     <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
@@ -285,18 +312,336 @@
 
               
             </div>
-          `;
-            additionalContentDiv.appendChild(newCard);
-
-            // Add event listener to the hide button
-            newCard
-              .querySelector(".hide-more-btn")
-              .addEventListener("click", () => {
-                newCard.remove();
-              });
-          }
+         `;
+                additionalContentDiv.appendChild(newCard);
+            });
         });
-      });
+
+
+
+        // btn 2
+        document.querySelectorAll(".know-more-btn2").forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const additionalContentDiv = document.getElementById("additional-content");
+
+                // Clear any existing content
+                additionalContentDiv.innerHTML = "";
+
+                // Add a new card
+                const newCard = document.createElement("div");
+                newCard.id = targetId.replace("#", "");
+                newCard.className = "more-card card mt-3";
+                newCard.innerHTML = `
+
+            <div class="card-body">
+                <h3 class="keyword">No. of Keywords : 51</h3>
+              <div class="row row2" >
+                <div class="col-md-4">
+                  <h5 class="card-title2">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <h5 class="card-title2">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+
+           <hr class="custom-hr">
+
+                <div class="col-md-4">
+                  <h5 class="card-title2">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+              </div>
+                 <hr class="custom-hr">
+
+              
+            </div>
+         `;
+                additionalContentDiv.appendChild(newCard);
+            });
+        });
+
+        // btn 3
+        document.querySelectorAll(".know-more-btn3").forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const additionalContentDiv = document.getElementById("additional-content");
+
+                // Clear any existing content
+                additionalContentDiv.innerHTML = "";
+
+                // Add a new card
+                const newCard = document.createElement("div");
+                newCard.id = targetId.replace("#", "");
+                newCard.className = "more-card card mt-3";
+                newCard.innerHTML = `
+
+            <div class="card-body">
+                <h3 class="keyword">No. of Keywords : 52</h3>
+              <div class="row row2" >
+                <div class="col-md-4">
+                  <h5 class="card-title2">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <h5 class="card-title2">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+
+           <hr class="custom-hr">
+
+                <div class="col-md-4">
+                  <h5 class="card-title2">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+              </div>
+                 <hr class="custom-hr">
+
+              
+            </div>
+         `;
+                additionalContentDiv.appendChild(newCard);
+            });
+        });
+
+        //btn 4
+        document.querySelectorAll(".know-more-btn4").forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const additionalContentDiv = document.getElementById("additional-content");
+
+                // Clear any existing content
+                additionalContentDiv.innerHTML = "";
+
+                // Add a new card
+                const newCard = document.createElement("div");
+                newCard.id = targetId.replace("#", "");
+                newCard.className = "more-card card mt-3";
+                newCard.innerHTML = `
+
+            <div class="card-body">
+                <h3 class="keyword">No. of Keywords : 53</h3>
+              <div class="row row2" >
+                <div class="col-md-4">
+                  <h5 class="card-title2">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                  <h5 class="card-title2">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+
+           <hr class="custom-hr">
+
+                <div class="col-md-4">
+                  <h5 class="card-title2">RESEARCH</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Technical SEO</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title2">Additional Info</h5>
+                  <div>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
+                  </div>
+                </div>
+              </div>
+                 <hr class="custom-hr">
+
+              
+            </div>
+         `;
+                additionalContentDiv.appendChild(newCard);
+            });
+        });
     </script>
     </div>
   </body>
