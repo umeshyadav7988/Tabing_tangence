@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Tabs with Cards</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .Service {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    }
+    .tab-content{
+        padding-top: 20px;
+    }
+    .more-card {
+
+        width: 100%;
+        box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    }
+    .know-more-btn{
+        background-color: black;
+    }
+  </style>
+</head>
+<body>
+   <h1 class="Service"><b>Our SEO Service Package</b></h1>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">Small Business</h5>
+                <p class="card-text">Ideal for websites to target 50 keywords and 2500 organic traffic/month.</p>
+                <button class="btn btn-primary know-more-btn" data-target="#moreHomeText1">Know More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">Medium Business</h5>
+                <p class="card-text">Ideal for websites to target 50 keywords and 2500 organic traffic/month.</p>
+                <button class="btn btn-primary know-more-btn" data-target="#moreHomeText2">Know More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">Enterprise Business</h5>
+                <p class="card-text">Ideal for websites to target 50 keywords and 2500 organic traffic/month.</p>
+                <button class="btn btn-primary know-more-btn" data-target="#moreHomeText3">Know More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">Custom</h5>
+                <p class="card-text">Can be any website. The plan is solely dependent upon the objective.</p>
+                <button class="btn btn-primary know-more-btn" data-target="#moreHomeText4">Know More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Additional content divs will be added here -->
+        <div id="additional-content"></div>
+      </div>
+    </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    document.querySelectorAll('.know-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const existingCard = document.querySelector(targetId);
+
+        // Remove existing card if it exists
+        if (existingCard) {
+          existingCard.remove();
+        } else {
+          // Add a new card
+          const additionalContentDiv = document.getElementById('additional-content');
+          const newCard = document.createElement('div');
+          newCard.id = targetId.replace('#', '');
+          newCard.className = 'more-card card mt-3';
+          newCard.innerHTML = `
+            <div class="card-body">
+              <h5 class="card-title">RESEARCH</h5>
+              <ul>Industry Research</ul>
+              <ul>Industry Research</ul>
+              <ul>Industry Research</ul>
+              <ul>Industry Research</ul>
+              <ul>Industry Research</ul>
+              <ul>Industry Research</ul>
+              <button class="btn btn-secondary hide-more-btn">Hide</button>
+            </div>
+          `;
+          additionalContentDiv.appendChild(newCard);
+
+          // Add event listener to the hide button
+          newCard.querySelector('.hide-more-btn').addEventListener('click', () => {
+            newCard.remove();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
