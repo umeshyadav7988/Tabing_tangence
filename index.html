@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Tabs with Cards</title>
@@ -25,13 +25,11 @@
         height: 100%;
         box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
       }
-      .tab-content {
-        padding-top: 20px;
-      }
-      .more-card {
-        width: 100%;
-        box-shadow: 0 3px 22px #00000029;
-      }
+      .tab-content{
+        background-color: #fff;
+        border-radius: 20px; 
+        padding: 20px;}
+
       .know-more-btn {
         background-color: black;
       }
@@ -44,7 +42,7 @@
         border-top: 2px solid #ddd;
       }
       .card-body {
-        /* position: relative; */
+        position: relative;
         border-radius: 15px;
         justify-content: center;
       }
@@ -52,597 +50,715 @@
         display: flex;
         margin: 5;
       }
-      .col-md-4 {
-        padding: 0 10px;
-        box-sizing: border-box;
-      }
-      .vertical-line {
-        width: 1px;
-        background-color: #ddd;
-        height: 100%;
+      .col-md-4::before {
+        content: "";
         position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(50%);
+        left: 100px;
+        width: 72px;
+        height: 10px;
+        color: aqua;
       }
-      .horizontal-line {
-        width: 100%;
-        border-top: 1px solid #ddd;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-      .custom-hr {
-  border: 0;
-  height: 1px;
-  background: #ddd; /* Light gray color */
-  margin: 20px 0; /* Spacing above and below the line */
-}
-
-#additional-content{
-    padding-top: 55px;
+ 
   
-}
+      #additional-content {
+        padding-top: 55px;
+      }
 
-.card-title {
-    text-align: center;
-    color: #303030;
-    font-size: 24px;
-    width: 214px;
-    height: 28px;
+      .card-title {
+        text-align: center;
+        color: #303030;
+        font-size: 24px;
+        width: 214px;
+        height: 28px;
+      }
+      .card-text {
+        text-align: center;
+        width: 200px;
+        height: 115px;
+      }
+      .know-more-btn {
+        width: 212.72px;
+        height: 60.84px;
+        border-radius: 16px;
+        opacity: 1;
+        box-shadow: 0px 3px 22px #00000029;
+      }
+      .keyword {
+        padding-bottom: 20px;
+        font-size: 20px;
+      }
+      .card-title2 {
+        left: 140px;
+        width: 174px;
+        height: 28px;
+      }
+      .col-md-4 {
+        margin-bottom: 30px;
+        border-left: 1px solid black;
+      }
+      .row2 {
+        position: relative;
+        margin-bottom: 0px;
+      }
+      html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-.card-text{
-    text-align: center;
-    width: 200px;
-    height: 115px;
+div, section {
+    position: relative;
 }
-.know-more-btn {
-    width: 212.72px;
-    height: 60.84px;
-    border-radius: 16px;
-    opacity: 1;
-    box-shadow: 0px 3px 22px #00000029;
+div {
+    position: relative;
 }
-.keyword{
+h5 {
+    color: #262324;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+ul, ul li, ol, ol li {
+    list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    font-family: 'Graphik';
+}
+.key-text ul {
+    padding-left: 30px;
+}
+.key-text ul li:before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/right-mark-new.png);
+    left: -44px;
+    width: 38px;
+    height: 36px;
+    top: -6px;
+    background-repeat: no-repeat;
+}
+.no-of-key h4{font-size: 20px; font-weight: bold; color: #000; margin-bottom: 0;}
+.key-border-saceond{position: relative;}
 
-    padding-bottom: 20px;
-   font-size: 20px;
-}
-.card-title2{
-left: 140px;
-width: 174px;
-height: 28px;
-}
-.col-md-4{
-    margin-bottom: 30px;
-    border-radius: 1 px solid black ;
-}
+  .key-border-saceond:before{position: absolute; content: ''; height: 100%; width: 1px; background-color: #000; left:-30px;}
+
+  .key-border{position: relative; margin-bottom: 0px;}
+
+  .key-border:before{position: absolute; content: ''; width: 100%; height: 1px; background-color: #000; bottom: 0;}
+  .key-text ul li{margin-bottom: 20px;position: relative;}
+  .key-text ul li{position: relative;}
+  .key-text h5{margin-top: 20px;}
+  .key-text ul{padding-left: 30px;}
+
+  .key-text h5{font-size: 24px; font-weight: bold; color: #000;}
+/* .key-text ul li{position: relative;}
+.key-text ul li:before{position: absolute!important; content: ''!important; background-image: url(../images/right-mark-new.png)!important; left: 0!important; background-color: transparent!important;} */
+.key-text ul li{width: 100%!important; box-shadow: none!important; padding: 0px!important; margin-right: 0px!important;}
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <section>
     <div class="container">
-    <h1 class="Service"><b>Our SEO Service Package</b></h1>
-    <div class="tab-content" id="myTabContent">
-      <div
-        class="tab-pane fade show active"
-        id="home"
-        role="tabpanel"
-        aria-labelledby="home-tab"
-      >
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card mt-3">
-              <div class="card-body">
-                <h5 class="card-title">Small Business</h5>
-                <p class="card-text">
-                  Ideal for websites to target 50 keywords and 2500 organic
-                  traffic/month.
-                </p>
-                <button
-                  class="btn btn-primary know-more-btn  know-more-btn1"
-                  data-target="#moreHomeText1"
-                >
-                  Know More
-                </button>
+      <h1 class="Service"><b>Our SEO Service Package</b></h1>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Small Business</h5>
+                  <p class="card-text">
+                    Ideal for websites to target 50 keywords and 2500 organic
+                    traffic/month.
+                  </p>
+                  <button
+                    class="btn btn-primary know-more-btn know-more-btn1"
+                    data-target="#moreHomeText1"
+                  >
+                    Know More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Medium Business</h5>
+                  <p class="card-text">
+                    Ideal for websites to target 50 keywords and 2500 organic
+                    traffic/month.
+                  </p>
+                  <button
+                    class="btn btn-primary know-more-btn know-more-btn2"
+                    data-target="#moreHomeText2"
+                  >
+                    Know More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Enterprise Business</h5>
+                  <p class="card-text">
+                    Ideal for websites to target 50 keywords and 2500 organic
+                    traffic/month.
+                  </p>
+                  <button
+                    class="btn btn-primary know-more-btn know-more-btn3"
+                    data-target="#moreHomeText3"
+                  >
+                    Know More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <h5 class="card-title">Custom</h5>
+                  <p class="card-text">
+                    Can be any website. The plan is solely dependent upon the
+                    objective.
+                  </p>
+                  <button
+                    class="btn btn-primary know-more-btn know-more-btn4"
+                    data-target="#moreHomeText4"
+                  >
+                    Know More
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card mt-3">
-              <div class="card-body">
-                <h5 class="card-title">Medium Business</h5>
-                <p class="card-text">
-                  Ideal for websites to target 50 keywords and 2500 organic
-                  traffic/month.
-                </p>
-                <button
-                  class="btn btn-primary know-more-btn  know-more-btn2"
-                  data-target="#moreHomeText2"
-                >
-                  Know More
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mt-3">
-              <div class="card-body">
-                <h5 class="card-title">Enterprise Business</h5>
-                <p class="card-text">
-                  Ideal for websites to target 50 keywords and 2500 organic
-                  traffic/month.
-                </p>
-                <button
-                  class="btn btn-primary know-more-btn  know-more-btn3"
-                  data-target="#moreHomeText3"
-                >
-                  Know More
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card mt-3">
-              <div class="card-body">
-                <h5 class="card-title">Custom</h5>
-                <p class="card-text">
-                  Can be any website. The plan is solely dependent upon the
-                  objective.
-                </p>
-                <button
-                  class="btn btn-primary know-more-btn  know-more-btn4"
-                  data-target="#moreHomeText4"
-                >
-                  Know More
-                </button>
-              </div>
-            </div>
-          </div>
+          <!-- Additional content divs will be added here -->
+          <div id="additional-content"></div>
         </div>
-        <!-- Additional content divs will be added here -->
-        <div id="additional-content"></div>
+      </div>
+
+      <!-- Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <!-- Custom JS -->
+      <script>
+        document.querySelectorAll(".know-more-btn1").forEach((button) => {
+          button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            const additionalContentDiv =
+              document.getElementById("additional-content");
+
+            // Clear any existing content
+            additionalContentDiv.innerHTML = "";
+
+            // Add a new card
+            const newCard = document.createElement("div");
+            newCard.id = targetId.replace("#", "");
+            newCard.className = "more-card card mt-3";
+            newCard.innerHTML = `
+           <div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="no-of-key">
+      <h4>No. of keywords: 50</h4>
+    </div>
+    <div class="row key-border">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text">
+          <h5>Research</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
       </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-     document.querySelectorAll(".know-more-btn1").forEach((button) => {
-            button.addEventListener("click", () => {
-                const targetId = button.getAttribute("data-target");
-                const additionalContentDiv = document.getElementById("additional-content");
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>On Page SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-                // Clear any existing content
-                additionalContentDiv.innerHTML = "";
 
-                // Add a new card
-                const newCard = document.createElement("div");
-                newCard.id = targetId.replace("#", "");
-                newCard.className = "more-card card mt-3";
-                newCard.innerHTML = `
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>Performance Matrices</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
 
-            <div class="card-body">
-                <h3 class="keyword"><b>No. of Keywords : 50</b></h3>
-              <div class="row row2" >
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text ">
+          <h5>Technical SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-                
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Off Page SEI</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-           <hr class="custom-hr">
 
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-              </div>
-                 <hr class="custom-hr">
-
-              
-            </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Type Of Reports</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+</div>
+        </div>
+      </div>
          `;
-                additionalContentDiv.appendChild(newCard);
-            });
+            additionalContentDiv.appendChild(newCard);
+          });
         });
-
-
 
         // btn 2
         document.querySelectorAll(".know-more-btn2").forEach((button) => {
-            button.addEventListener("click", () => {
-                const targetId = button.getAttribute("data-target");
-                const additionalContentDiv = document.getElementById("additional-content");
+          button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            const additionalContentDiv =
+              document.getElementById("additional-content");
 
-                // Clear any existing content
-                additionalContentDiv.innerHTML = "";
+            // Clear any existing content
+            additionalContentDiv.innerHTML = "";
 
-                // Add a new card
-                const newCard = document.createElement("div");
-                newCard.id = targetId.replace("#", "");
-                newCard.className = "more-card card mt-3";
-                newCard.innerHTML = `
+            // Add a new card
+            const newCard = document.createElement("div");
+            newCard.id = targetId.replace("#", "");
+            newCard.className = "more-card card mt-3";
+            newCard.innerHTML = `
+           <div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="no-of-key">
+      <h4>No. of keywords: 51</h4>
+    </div>
+    <div class="row key-border">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text">
+          <h5>Research</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-            <div class="card-body">
-                <h3 class="keyword"><b>No. of Keywords : 51</b></h3>
-              <div class="row row2" >
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>On Page SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-                
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
 
-           <hr class="custom-hr">
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>Performance Matrices</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
 
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-              </div>
-                 <hr class="custom-hr">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text ">
+          <h5>Technical SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-              
-            </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Off Page SEI</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Type Of Reports</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+</div>
+        </div>
+      </div>
          `;
-                additionalContentDiv.appendChild(newCard);
-            });
+            additionalContentDiv.appendChild(newCard);
+          });
         });
-
         // btn 3
         document.querySelectorAll(".know-more-btn3").forEach((button) => {
-            button.addEventListener("click", () => {
-                const targetId = button.getAttribute("data-target");
-                const additionalContentDiv = document.getElementById("additional-content");
+          button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            const additionalContentDiv =
+              document.getElementById("additional-content");
 
-                // Clear any existing content
-                additionalContentDiv.innerHTML = "";
+            // Clear any existing content
+            additionalContentDiv.innerHTML = "";
 
-                // Add a new card
-                const newCard = document.createElement("div");
-                newCard.id = targetId.replace("#", "");
-                newCard.className = "more-card card mt-3";
-                newCard.innerHTML = `
+            // Add a new card
+            const newCard = document.createElement("div");
+            newCard.id = targetId.replace("#", "");
+            newCard.className = "more-card card mt-3";
+            newCard.innerHTML = `
+           <div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="no-of-key">
+      <h4>No. of keywords: 52</h4>
+    </div>
+    <div class="row key-border">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text">
+          <h5>Research</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-            <div class="card-body">
-                 <h3 class="keyword"><b>No. of Keywords : 52</b></h3>
-              <div class="row row2" >
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                   
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>On Page SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-                
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
 
-           <hr class="custom-hr">
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>Performance Matrices</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
 
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-              </div>
-                 <hr class="custom-hr">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text ">
+          <h5>Technical SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
 
-              
-            </div>
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Off Page SEI</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Type Of Reports</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+</div>
+        </div>
+      </div>
          `;
-                additionalContentDiv.appendChild(newCard);
-            });
+            additionalContentDiv.appendChild(newCard);
+          });
         });
-
         //btn 4
         document.querySelectorAll(".know-more-btn4").forEach((button) => {
-            button.addEventListener("click", () => {
-                const targetId = button.getAttribute("data-target");
-                const additionalContentDiv = document.getElementById("additional-content");
+          button.addEventListener("click", () => {
+            const targetId = button.getAttribute("data-target");
+            const additionalContentDiv =
+              document.getElementById("additional-content");
 
-                // Clear any existing content
-                additionalContentDiv.innerHTML = "";
+            // Clear any existing content
+            additionalContentDiv.innerHTML = "";
 
-                // Add a new card
-                const newCard = document.createElement("div");
-                newCard.id = targetId.replace("#", "");
-                newCard.className = "more-card card mt-3";
-                newCard.innerHTML = `
-
-            <div class="card-body">
-                <h3 class="keyword"><b>No. of Keywords : 53</b></h3>
-              <div class="row row2" >
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-
-                
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-
-           <hr class="custom-hr">
-
-                <div class="col-md-4">
-                  <h5 class="card-title2">RESEARCH</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Technical SEO</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title2">Additional Info</h5>
-                  <div>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                    <a href=""> <i class="fa-solid fa-check">Industry Research</i></a> <br>
-                  </div>
-                </div>
-              </div>
-                 <hr class="custom-hr">
-
-              
-            </div>
-         `;
-                additionalContentDiv.appendChild(newCard);
-            });
-        });
-    </script>
+            // Add a new card
+            const newCard = document.createElement("div");
+            newCard.id = targetId.replace("#", "");
+            newCard.className = "more-card card mt-3";
+            newCard.innerHTML = `
+           <div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class="no-of-key">
+      <h4>No. of keywords: 53</h4>
     </div>
+    <div class="row key-border">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text">
+          <h5>Research</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>On Page SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12 key-border-saceond">
+        <div class="key-text">
+          <h5>Performance Matrices</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+        <div class="key-text ">
+          <h5>Technical SEO</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Off Page SEI</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-12  key-border-saceond">
+        <div class="key-text">
+          <h5>Type Of Reports</h5>
+          <ul>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+            <li>Industry Research</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+</div>
+        </div>
+      </div>
+         `;
+            additionalContentDiv.appendChild(newCard);
+          });
+        });
+      </script>
+    </div>
+    </section>
   </body>
 </html>
